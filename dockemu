@@ -18,7 +18,7 @@ docker_image="to_dockemu:simple"
 ## deberian ser leidas del conf file
 #GENERAL
 # waf_path=/home/emulation/repos/ns-3-allinone/ns-3-dev/
-# verbose=false
+verbose=false
 # logfile="logs/naet.log"
 # persistence=true
 # container_log_path=log/
