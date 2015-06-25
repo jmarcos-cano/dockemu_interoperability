@@ -46,7 +46,7 @@ bmx6_network=10.0.0.0
 bmx6_netmask=255.0.0.0
 
 
-
+version="V.2.0 beta"
 
 if $verbose;then 
 	set -x
@@ -79,7 +79,7 @@ echo  "| |/ /\ \_/ / \__/\| |\  \| |___| |  | | |_| |"
 echo  "|___/  \___/ \____/\_| \_/\____/\_|  |_/\___/ "
 echo  ""
 echo  "##############################################"
-echo  "#########  WELCOME TO DOCKEMU V.1.0  #########"
+echo  "#########  WELCOME TO DOCKEMU $version ########"
 echo  "##############################################"
 echo  ""
 echo  "${reset}"
