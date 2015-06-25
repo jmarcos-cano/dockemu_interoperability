@@ -99,7 +99,7 @@ main (int argc, char *argv[])
   // the right side.
   //
   NodeContainer nodes;
-  nodes.Create(2);
+  nodes.Create(4);
 
   //
   // We're going to use 802.11 A so set up a wifi helper to reflect that.
@@ -130,6 +130,13 @@ main (int argc, char *argv[])
   // We need location information since we are talking about wifi, so add a
   // constant position to the ghost nodes.
   //
+ // MobilityHelper mobility;
+ // Ptr<ListPositionAllocator> positionAlloc = CreateObject<ListPositionAllocator> ();
+ // positionAlloc->Add (Vector (0.0, 0.0, 0.0));
+ // positionAlloc->Add (Vector (5.0, 0.0, 0.0));
+ // mobility.SetPositionAllocator (positionAlloc);
+ // mobility.SetMobilityModel ("ns3::ConstantPositionMobilityModel");
+
   MobilityHelper mobility;
   mobility.SetPositionAllocator ("ns3::GridPositionAllocator",
                                  "MinX", DoubleValue (1.0),
@@ -163,6 +170,14 @@ main (int argc, char *argv[])
 
 
   //running containers
+tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-3")); 
+ tapBridge.Install (nodes.Get (3), devices.Get (3));
+tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-2")); 
+ tapBridge.Install (nodes.Get (2), devices.Get (2));
+tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-1")); 
+ tapBridge.Install (nodes.Get (1), devices.Get (1));
+tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-0")); 
+ tapBridge.Install (nodes.Get (0), devices.Get (0));
 
 
 
@@ -173,7 +188,7 @@ main (int argc, char *argv[])
   //
   // Run the simulation for ten minutes to give the user time to play around
   //
-  Simulator::Stop (Seconds (600.));
+  Simulator::Stop (Seconds (300.));
   Simulator::Run ();
   Simulator::Destroy ();
 }

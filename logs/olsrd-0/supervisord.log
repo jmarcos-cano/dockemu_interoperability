@@ -1,0 +1,466 @@
+2015-06-25 06:07:04,277 CRIT Supervisor running as root (no user in config file)
+2015-06-25 06:07:04,277 WARN Included extra file "/etc/supervisor/conf.d/programs.conf" during parsing
+2015-06-25 06:07:04,328 INFO RPC interface 'supervisor' initialized
+2015-06-25 06:07:04,328 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2015-06-25 06:07:04,328 INFO supervisord started with pid 1
+2015-06-25 06:07:05,331 INFO spawned: 'iperf' with pid 9
+2015-06-25 06:07:05,334 INFO spawned: 'olsr' with pid 10
+2015-06-25 06:07:05,341 DEBG 'iperf' stdout output:
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+
+2015-06-25 06:07:05,345 DEBG 'olsr' stdout output:
+
+ *** olsr.org -  0.6.6.1-git_0000000-hash_41d32a614ae55e881b7c0456c8e3ed54 ***
+ Build date: 2013-10-26 05:10:52 on toyol
+ http://www.olsr.org
+
+
+2015-06-25 06:07:05,346 DEBG 'olsr' stdout output:
+Debug level: 0
+	IPv4 broadcast: 255.255.255.255
+	HELLO interval: 6.00
+	HELLO validity: 600.00
+	TC interval: 0.50
+	TC validity: 300.00
+	MID interval: 10.00
+	MID validity: 300.00
+	HNA interval: 10.00
+	HNA validity: 300.00
+
+Interface DefaultsLink quality fish eye 1
+IpVersion: 4
+Clear screen enabled
+Noint set to 1
+Willingness: 3
+	IPC host: 127.0.0.1
+Hysteresis disabled
+Link quality level 2
+Pollrate 0.10
+TC redundancy 2
+MPR coverage 5
+
+2015-06-25 06:07:05,346 DEBG 'olsr' stderr output:
+Parsing file: "/etc/olsrd/olsrd.conf"
+
+2015-06-25 06:07:05,347 DEBG 'olsr' stdout output:
+Queuing if $interface
+	IPv4 broadcast/multicast : 255.255.255.255
+	Mode           : mesh (d)
+	IPv6 multicast           : ff02::6d
+	HELLO emission/validity  : 6.00 (d)/600.00 (d)
+	TC emission/validity     : 0.50 (d)/300.00 (d)
+	MID emission/validity    : 10.00 (d)/300.00 (d)
+	HNA emission/validity    : 10.00 (d)/300.00 (d)
+	Autodetect changes       : yes
+	IPv4 broadcast/multicast : AUTO
+	Mode           : mesh
+	IPv6 multicast           : ::
+	HELLO emission/validity  : 0.00/0.00
+	TC emission/validity     : 0.00/0.00
+	MID emission/validity    : 0.00/0.00
+	HNA emission/validity    : 0.00/0.00
+	Autodetect changes       : no
+
+2015-06-25 06:07:05,352 DEBG 'olsr' stderr output:
+No interfaces detected! This might be intentional, but it also might mean that your configuration is fubar.
+I will continue after 5 seconds...
+
+2015-06-25 06:07:06,353 INFO success: iperf entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-06-25 06:07:06,353 INFO success: olsr entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-06-25 06:07:10,352 DEBG 'olsr' stdout output:
+-- ALL PLUGINS LOADED! --
+
+
+2015-06-25 06:15:27,127 WARN received SIGTERM indicating exit request
+2015-06-25 06:15:27,128 DEBG killing olsr (pid 10) with signal SIGTERM
+2015-06-25 06:15:27,128 INFO waiting for iperf, olsr to die
+2015-06-25 06:15:27,128 DEBG 'olsr' stdout output:
+Closing plugins...
+Free all memory...
+
+2015-06-25 06:15:27,128 DEBG fd 10 closed, stopped monitoring <POutputDispatcher at 140027989292456 for <Subprocess at 140027989551656 with name olsr in state STOPPING> (stdout)>
+2015-06-25 06:15:27,129 DEBG fd 14 closed, stopped monitoring <POutputDispatcher at 140027989292744 for <Subprocess at 140027989551656 with name olsr in state STOPPING> (stderr)>
+2015-06-25 06:15:27,129 INFO stopped: olsr (exit status 0)
+2015-06-25 06:15:27,129 DEBG received SIGCLD indicating a child quit
+2015-06-25 06:15:27,129 DEBG killing iperf (pid 9) with signal SIGTERM
+2015-06-25 06:15:27,130 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140027989292168 for <Subprocess at 140027989551440 with name iperf in state STOPPING> (stderr)>
+2015-06-25 06:15:27,130 DEBG fd 7 closed, stopped monitoring <POutputDispatcher at 140027989291880 for <Subprocess at 140027989551440 with name iperf in state STOPPING> (stdout)>
+2015-06-25 06:15:27,130 INFO stopped: iperf (exit status 0)
+2015-06-25 06:15:27,131 DEBG received SIGCLD indicating a child quit
+2015-06-25 06:17:59,164 CRIT Supervisor running as root (no user in config file)
+2015-06-25 06:17:59,164 WARN Included extra file "/etc/supervisor/conf.d/programs.conf" during parsing
+2015-06-25 06:17:59,213 INFO RPC interface 'supervisor' initialized
+2015-06-25 06:17:59,213 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2015-06-25 06:17:59,214 INFO supervisord started with pid 1
+2015-06-25 06:18:00,217 INFO spawned: 'iperf' with pid 10
+2015-06-25 06:18:00,222 INFO spawned: 'olsr' with pid 11
+2015-06-25 06:18:00,226 DEBG 'iperf' stdout output:
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+
+2015-06-25 06:18:00,228 DEBG 'olsr' stdout output:
+
+ *** olsr.org -  0.6.6.1-git_0000000-hash_41d32a614ae55e881b7c0456c8e3ed54 ***
+ Build date: 2013-10-26 05:10:52 on toyol
+ http://www.olsr.org
+
+
+2015-06-25 06:18:00,228 DEBG 'olsr' stderr output:
+Parsing file: "/etc/olsrd/olsrd.conf"
+
+2015-06-25 06:18:00,228 DEBG 'olsr' stdout output:
+Debug level: 0
+	IPv4 broadcast: 255.255.255.255
+	HELLO interval: 6.00
+	HELLO validity: 600.00
+	TC interval: 0.50
+	TC validity: 300.00
+	MID interval: 10.00
+	MID validity: 300.00
+	HNA interval: 10.00
+	HNA validity: 300.00
+
+Interface DefaultsLink quality fish eye 1
+IpVersion: 4
+
+2015-06-25 06:18:00,229 DEBG 'olsr' stdout output:
+Clear screen enabled
+Noint set to 1
+Willingness: 3
+	IPC host: 127.0.0.1
+Hysteresis disabled
+Link quality level 2
+Pollrate 0.10
+TC redundancy 2
+MPR coverage 5
+
+2015-06-25 06:18:00,229 DEBG 'olsr' stdout output:
+Queuing if $interface
+	IPv4 broadcast/multicast : 255.255.255.255
+	Mode           : mesh (d)
+	IPv6 multicast           : ff02::6d
+	HELLO emission/validity  : 6.00 (d)/600.00 (d)
+	TC emission/validity     : 0.50 (d)/300.00 (d)
+	MID emission/validity    : 10.00 (d)/300.00 (d)
+	HNA emission/validity    : 10.00 (d)/300.00 (d)
+	Autodetect changes       : yes
+	IPv4 broadcast/multicast : AUTO
+	Mode           : mesh
+	IPv6 multicast           : ::
+	HELLO emission/validity  : 0.00/0.00
+	TC emission/validity     : 0.00/0.00
+	MID emission/validity    : 0.00/0.00
+	HNA emission/validity    : 0.00/0.00
+	Autodetect changes       : no
+
+2015-06-25 06:18:00,234 DEBG 'olsr' stderr output:
+No interfaces detected! This might be intentional, but it also might mean that your configuration is fubar.
+I will continue after 5 seconds...
+
+2015-06-25 06:18:01,235 INFO success: iperf entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-06-25 06:18:01,235 INFO success: olsr entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-06-25 06:18:05,234 DEBG 'olsr' stdout output:
+-- ALL PLUGINS LOADED! --
+
+
+2015-06-25 06:18:41,765 WARN received SIGTERM indicating exit request
+2015-06-25 06:18:41,765 DEBG killing olsr (pid 11) with signal SIGTERM
+2015-06-25 06:18:41,765 INFO waiting for iperf, olsr to die
+2015-06-25 06:18:41,765 DEBG 'olsr' stdout output:
+Closing plugins...
+
+2015-06-25 06:18:41,766 DEBG 'olsr' stdout output:
+Free all memory...
+
+2015-06-25 06:18:41,766 DEBG fd 14 closed, stopped monitoring <POutputDispatcher at 140038570571464 for <Subprocess at 140038570830376 with name olsr in state STOPPING> (stderr)>
+2015-06-25 06:18:41,766 DEBG fd 10 closed, stopped monitoring <POutputDispatcher at 140038570571176 for <Subprocess at 140038570830376 with name olsr in state STOPPING> (stdout)>
+2015-06-25 06:18:41,766 INFO stopped: olsr (exit status 0)
+2015-06-25 06:18:41,766 DEBG received SIGCLD indicating a child quit
+2015-06-25 06:18:41,767 DEBG killing iperf (pid 10) with signal SIGTERM
+2015-06-25 06:18:41,767 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140038570570888 for <Subprocess at 140038570830160 with name iperf in state STOPPING> (stderr)>
+2015-06-25 06:18:41,767 DEBG fd 7 closed, stopped monitoring <POutputDispatcher at 140038570570600 for <Subprocess at 140038570830160 with name iperf in state STOPPING> (stdout)>
+2015-06-25 06:18:41,768 INFO stopped: iperf (exit status 0)
+2015-06-25 06:18:41,768 DEBG received SIGCLD indicating a child quit
+2015-06-25 06:19:14,005 CRIT Supervisor running as root (no user in config file)
+2015-06-25 06:19:14,005 WARN Included extra file "/etc/supervisor/conf.d/programs.conf" during parsing
+2015-06-25 06:19:14,053 INFO RPC interface 'supervisor' initialized
+2015-06-25 06:19:14,053 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2015-06-25 06:19:14,053 INFO supervisord started with pid 1
+2015-06-25 06:19:15,057 INFO spawned: 'iperf' with pid 11
+2015-06-25 06:19:15,059 INFO spawned: 'olsr' with pid 12
+2015-06-25 06:19:15,067 DEBG 'iperf' stdout output:
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+
+2015-06-25 06:19:15,068 DEBG 'olsr' stdout output:
+
+ *** olsr.org -  0.6.6.1-git_0000000-hash_41d32a614ae55e881b7c0456c8e3ed54 ***
+ Build date: 2013-10-26 05:10:52 on toyol
+ http://www.olsr.org
+
+
+2015-06-25 06:19:15,068 DEBG 'olsr' stdout output:
+Debug level: 0
+	IPv4 broadcast: 255.255.255.255
+
+2015-06-25 06:19:15,069 DEBG 'olsr' stderr output:
+Parsing file: "/etc/olsrd/olsrd.conf"
+
+2015-06-25 06:19:15,069 DEBG 'olsr' stdout output:
+	HELLO interval: 6.00
+	HELLO validity: 600.00
+	TC interval: 0.50
+	TC validity: 300.00
+	MID interval: 10.00
+	MID validity: 300.00
+	HNA interval: 10.00
+	HNA validity: 300.00
+
+Interface DefaultsLink quality fish eye 1
+IpVersion: 4
+Clear screen enabled
+Noint set to 1
+Willingness: 3
+	IPC host: 127.0.0.1
+Hysteresis disabled
+Link quality level 2
+Pollrate 0.10
+TC redundancy 2
+MPR coverage 5
+Queuing if $interface
+	IPv4 broadcast/multicast : 255.255.255.255
+	Mode           : mesh (d)
+	IPv6 multicast           : ff02::6d
+	HELLO emission/validity  : 6.00 (d)/600.00 (d)
+	TC emission/validity     : 0.50 (d)/300.00 (d)
+	MID emission/validity    : 10.00 (d)/300.00 (d)
+	HNA emission/validity    : 10.00 (d)/300.00 (d)
+	Autodetect changes       : yes
+	IPv4 broadcast/multicast : AUTO
+	Mode           : mesh
+	IPv6 multicast           : ::
+	HELLO emission/validity  : 0.00/0.00
+	TC emission/validity     : 0.00/0.00
+	MID emission/validity    : 0.00/0.00
+	HNA emission/validity    : 0.00/0.00
+	Autodetect changes       : no
+
+2015-06-25 06:19:15,073 DEBG 'olsr' stderr output:
+No interfaces detected! This might be intentional, but it also might mean that your configuration is fubar.
+I will continue after 5 seconds...
+
+2015-06-25 06:19:16,074 INFO success: iperf entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-06-25 06:19:16,074 INFO success: olsr entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-06-25 06:19:20,073 DEBG 'olsr' stdout output:
+-- ALL PLUGINS LOADED! --
+
+
+2015-06-25 06:38:15,976 WARN received SIGTERM indicating exit request
+2015-06-25 06:38:15,976 DEBG killing olsr (pid 12) with signal SIGTERM
+2015-06-25 06:38:15,976 INFO waiting for iperf, olsr to die
+2015-06-25 06:38:15,976 DEBG 'olsr' stdout output:
+Closing plugins...
+Free all memory...
+
+2015-06-25 06:38:15,977 DEBG fd 10 closed, stopped monitoring <POutputDispatcher at 140529754568104 for <Subprocess at 140529754827304 with name olsr in state STOPPING> (stdout)>
+2015-06-25 06:38:15,977 DEBG fd 14 closed, stopped monitoring <POutputDispatcher at 140529754568392 for <Subprocess at 140529754827304 with name olsr in state STOPPING> (stderr)>
+2015-06-25 06:38:15,977 INFO stopped: olsr (exit status 0)
+2015-06-25 06:38:15,977 DEBG received SIGCLD indicating a child quit
+2015-06-25 06:38:15,977 DEBG killing iperf (pid 11) with signal SIGTERM
+2015-06-25 06:38:15,978 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140529754567816 for <Subprocess at 140529754827088 with name iperf in state STOPPING> (stderr)>
+2015-06-25 06:38:15,978 DEBG fd 7 closed, stopped monitoring <POutputDispatcher at 140529754567528 for <Subprocess at 140529754827088 with name iperf in state STOPPING> (stdout)>
+2015-06-25 06:38:15,979 INFO stopped: iperf (exit status 0)
+2015-06-25 06:38:15,979 DEBG received SIGCLD indicating a child quit
+2015-06-25 06:40:30,787 CRIT Supervisor running as root (no user in config file)
+2015-06-25 06:40:30,787 WARN Included extra file "/etc/supervisor/conf.d/programs.conf" during parsing
+2015-06-25 06:40:30,835 INFO RPC interface 'supervisor' initialized
+2015-06-25 06:40:30,836 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2015-06-25 06:40:30,836 INFO supervisord started with pid 1
+2015-06-25 06:40:31,839 INFO spawned: 'iperf' with pid 9
+2015-06-25 06:40:31,841 INFO spawned: 'olsr' with pid 10
+2015-06-25 06:40:31,849 DEBG 'iperf' stdout output:
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+
+2015-06-25 06:40:31,850 DEBG 'olsr' stdout output:
+
+ *** olsr.org -  0.6.6.1-git_0000000-hash_41d32a614ae55e881b7c0456c8e3ed54 ***
+ Build date: 2013-10-26 05:10:52 on toyol
+ http://www.olsr.org
+
+
+2015-06-25 06:40:31,851 DEBG 'olsr' stdout output:
+Debug level: 0
+	IPv4 broadcast: 255.255.255.255
+	HELLO interval: 6.00
+	HELLO validity: 600.00
+	TC interval: 0.50
+	TC validity: 300.00
+	MID interval: 10.00
+	MID validity: 300.00
+	HNA interval: 10.00
+	HNA validity: 300.00
+
+Interface DefaultsLink quality fish eye 1
+IpVersion: 4
+Clear screen enabled
+Noint set to 1
+Willingness: 3
+	IPC host: 127.0.0.1
+Hysteresis disabled
+Link quality level 2
+Pollrate 0.10
+TC redundancy 2
+MPR coverage 5
+Queuing if $interface
+	IPv4 broadcast/multicast : 255.255.255.255
+	Mode           : mesh (d)
+	IPv6 multicast           : ff02::6d
+	HELLO emission/validity  : 6.00 (d)/600.00 (d)
+	TC emission/validity     : 0.50 (d)/300.00 (d)
+	MID emission/validity    : 10.00 (d)/300.00 (d)
+
+2015-06-25 06:40:31,851 DEBG 'olsr' stderr output:
+Parsing file: "/etc/olsrd/olsrd.conf"
+
+2015-06-25 06:40:31,852 DEBG 'olsr' stdout output:
+	HNA emission/validity    : 10.00 (d)/300.00 (d)
+	Autodetect changes       : yes
+	IPv4 broadcast/multicast : AUTO
+	Mode           : mesh
+	IPv6 multicast           : ::
+	HELLO emission/validity  : 0.00/0.00
+	TC emission/validity     : 0.00/0.00
+	MID emission/validity    : 0.00/0.00
+	HNA emission/validity    : 0.00/0.00
+	Autodetect changes       : no
+
+2015-06-25 06:40:31,858 DEBG 'olsr' stderr output:
+No interfaces detected! This might be intentional, but it also might mean that your configuration is fubar.
+I will continue after 5 seconds...
+
+2015-06-25 06:40:32,860 INFO success: iperf entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-06-25 06:40:32,860 INFO success: olsr entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-06-25 06:40:36,858 DEBG 'olsr' stdout output:
+-- ALL PLUGINS LOADED! --
+
+
+2015-06-25 06:40:40,030 WARN received SIGTERM indicating exit request
+2015-06-25 06:40:40,030 DEBG killing olsr (pid 10) with signal SIGTERM
+2015-06-25 06:40:40,030 INFO waiting for iperf, olsr to die
+2015-06-25 06:40:40,030 DEBG 'olsr' stdout output:
+Closing plugins...
+
+2015-06-25 06:40:40,030 DEBG 'olsr' stdout output:
+Free all memory...
+
+2015-06-25 06:40:40,030 DEBG fd 14 closed, stopped monitoring <POutputDispatcher at 140449269622472 for <Subprocess at 140449269881384 with name olsr in state STOPPING> (stderr)>
+2015-06-25 06:40:40,031 DEBG fd 10 closed, stopped monitoring <POutputDispatcher at 140449269622184 for <Subprocess at 140449269881384 with name olsr in state STOPPING> (stdout)>
+2015-06-25 06:40:40,031 INFO stopped: olsr (exit status 0)
+2015-06-25 06:40:40,031 DEBG received SIGCLD indicating a child quit
+2015-06-25 06:40:40,031 DEBG killing iperf (pid 9) with signal SIGTERM
+2015-06-25 06:40:40,031 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140449269621896 for <Subprocess at 140449269881168 with name iperf in state STOPPING> (stderr)>
+2015-06-25 06:40:40,031 DEBG fd 7 closed, stopped monitoring <POutputDispatcher at 140449269621608 for <Subprocess at 140449269881168 with name iperf in state STOPPING> (stdout)>
+2015-06-25 06:40:40,031 INFO stopped: iperf (exit status 0)
+2015-06-25 06:40:40,031 DEBG received SIGCLD indicating a child quit
+2015-06-25 06:45:27,912 CRIT Supervisor running as root (no user in config file)
+2015-06-25 06:45:27,913 WARN Included extra file "/etc/supervisor/conf.d/programs.conf" during parsing
+2015-06-25 06:45:27,961 INFO RPC interface 'supervisor' initialized
+2015-06-25 06:45:27,961 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2015-06-25 06:45:27,962 INFO supervisord started with pid 1
+2015-06-25 06:45:28,965 INFO spawned: 'iperf' with pid 9
+2015-06-25 06:45:28,968 INFO spawned: 'olsr' with pid 10
+2015-06-25 06:45:28,975 DEBG 'iperf' stdout output:
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+
+2015-06-25 06:45:28,978 DEBG 'olsr' stdout output:
+
+ *** olsr.org -  0.6.6.1-git_0000000-hash_41d32a614ae55e881b7c0456c8e3ed54 ***
+ Build date: 2013-10-26 05:10:52 on toyol
+ http://www.olsr.org
+
+
+2015-06-25 06:45:28,978 DEBG 'olsr' stdout output:
+Debug level: 0
+	IPv4 broadcast: 255.255.255.255
+	HELLO interval: 6.00
+	HELLO validity: 600.00
+	TC interval: 0.50
+	TC validity: 300.00
+	MID interval: 10.00
+	MID validity: 300.00
+	HNA interval: 10.00
+	HNA validity: 300.00
+
+2015-06-25 06:45:28,978 DEBG 'olsr' stderr output:
+Parsing file: "/etc/olsrd/olsrd.conf"
+
+2015-06-25 06:45:28,979 DEBG 'olsr' stdout output:
+
+Interface DefaultsLink quality fish eye 1
+IpVersion: 4
+Clear screen enabled
+Noint set to 1
+Willingness: 3
+	IPC host: 127.0.0.1
+Hysteresis disabled
+Link quality level 2
+Pollrate 0.10
+TC redundancy 2
+MPR coverage 5
+Queuing if $interface
+	IPv4 broadcast/multicast : 255.255.255.255
+	Mode           : mesh (d)
+	IPv6 multicast           : ff02::6d
+	HELLO emission/validity  : 6.00 (d)/600.00 (d)
+	TC emission/validity     : 0.50 (d)/300.00 (d)
+	MID emission/validity    : 10.00 (d)/300.00 (d)
+	HNA emission/validity    : 10.00 (d)/300.00 (d)
+	Autodetect changes       : yes
+	IPv4 broadcast/multicast : AUTO
+	Mode           : mesh
+	IPv6 multicast           : ::
+	HELLO emission/validity  : 0.00/0.00
+	TC emission/validity     : 0.00/0.00
+	MID emission/validity    : 0.00/0.00
+	HNA emission/validity    : 0.00/0.00
+	Autodetect changes       : no
+
+2015-06-25 06:45:28,983 DEBG 'olsr' stderr output:
+No interfaces detected! This might be intentional, but it also might mean that your configuration is fubar.
+I will continue after 5 seconds...
+
+2015-06-25 06:45:29,984 INFO success: iperf entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-06-25 06:45:29,985 INFO success: olsr entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-06-25 06:45:33,983 DEBG 'olsr' stdout output:
+-- ALL PLUGINS LOADED! --
+
+
+2015-06-25 06:49:27,284 WARN received SIGTERM indicating exit request
+2015-06-25 06:49:27,284 DEBG killing olsr (pid 10) with signal SIGTERM
+2015-06-25 06:49:27,284 INFO waiting for iperf, olsr to die
+2015-06-25 06:49:27,285 DEBG 'olsr' stdout output:
+Closing plugins...
+Free all memory...
+
+2015-06-25 06:49:27,285 DEBG fd 10 closed, stopped monitoring <POutputDispatcher at 139847156274600 for <Subprocess at 139847156533800 with name olsr in state STOPPING> (stdout)>
+2015-06-25 06:49:27,285 DEBG fd 14 closed, stopped monitoring <POutputDispatcher at 139847156274888 for <Subprocess at 139847156533800 with name olsr in state STOPPING> (stderr)>
+2015-06-25 06:49:27,285 INFO stopped: olsr (exit status 0)
+2015-06-25 06:49:27,285 DEBG received SIGCLD indicating a child quit
+2015-06-25 06:49:27,286 DEBG killing iperf (pid 9) with signal SIGTERM
+2015-06-25 06:49:27,286 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139847156274312 for <Subprocess at 139847156533584 with name iperf in state STOPPING> (stderr)>
+2015-06-25 06:49:27,286 DEBG fd 7 closed, stopped monitoring <POutputDispatcher at 139847156274024 for <Subprocess at 139847156533584 with name iperf in state STOPPING> (stdout)>
+2015-06-25 06:49:27,287 INFO stopped: iperf (exit status 0)
+2015-06-25 06:49:27,287 DEBG received SIGCLD indicating a child quit
