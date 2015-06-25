@@ -156,12 +156,6 @@ main (int argc, char *argv[])
 
 
   //running containers
-tapBridge.SetAttribute ('DeviceName', StringValue ('tap-olsrd-2')); tapBridge.Install (nodes.Get (2), devices.Get (2));
-tapBridge.SetAttribute ('DeviceName', StringValue ('tap-olsrd-1')); tapBridge.Install (nodes.Get (1), devices.Get (1));
-tapBridge.SetAttribute ('DeviceName', StringValue ('tap-olsrd-0')); tapBridge.Install (nodes.Get (0), devices.Get (0));
-$text
-$text
-$text
 
 
 
