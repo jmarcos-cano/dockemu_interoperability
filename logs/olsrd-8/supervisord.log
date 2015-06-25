@@ -72,3 +72,21 @@ I will continue after 5 seconds...
 -- ALL PLUGINS LOADED! --
 
 
+2015-06-25 07:17:32,583 WARN received SIGTERM indicating exit request
+2015-06-25 07:17:32,583 DEBG killing olsr (pid 11) with signal SIGTERM
+2015-06-25 07:17:32,583 INFO waiting for iperf, olsr to die
+2015-06-25 07:17:32,584 DEBG 'olsr' stdout output:
+Closing plugins...
+
+2015-06-25 07:17:32,584 DEBG 'olsr' stdout output:
+Free all memory...
+
+2015-06-25 07:17:32,584 DEBG fd 10 closed, stopped monitoring <POutputDispatcher at 140568697521576 for <Subprocess at 140568697780776 with name olsr in state STOPPING> (stdout)>
+2015-06-25 07:17:32,585 DEBG fd 14 closed, stopped monitoring <POutputDispatcher at 140568697521864 for <Subprocess at 140568697780776 with name olsr in state STOPPING> (stderr)>
+2015-06-25 07:17:32,585 INFO stopped: olsr (exit status 0)
+2015-06-25 07:17:32,585 DEBG received SIGCLD indicating a child quit
+2015-06-25 07:17:32,585 DEBG killing iperf (pid 10) with signal SIGTERM
+2015-06-25 07:17:32,586 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140568697521288 for <Subprocess at 140568697780560 with name iperf in state STOPPING> (stderr)>
+2015-06-25 07:17:32,586 DEBG fd 7 closed, stopped monitoring <POutputDispatcher at 140568697521000 for <Subprocess at 140568697780560 with name iperf in state STOPPING> (stdout)>
+2015-06-25 07:17:32,586 INFO stopped: iperf (exit status 0)
+2015-06-25 07:17:32,586 DEBG received SIGCLD indicating a child quit
