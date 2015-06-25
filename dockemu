@@ -86,7 +86,7 @@ echo  "${reset}"
 }
 
 
-
+dockemu
 
 #######################
 # usage()
@@ -424,7 +424,7 @@ if [ $# -gt 0 ] ;then
 					#echo "conf: $conf_file found"
 					#step 1:
 					#echo "lets read it"
-					dockemu
+					
 					config_reader $conf_file
 					#step 2:
 					start olsrd $olsr_containers
