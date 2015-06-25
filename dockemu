@@ -46,7 +46,7 @@ bmx6_network=10.0.0.0
 bmx6_netmask=255.0.0.0
 
 
-version="V.2.0 beta"
+version="V.2.0 BETA"
 
 if $verbose;then 
 	set -x
@@ -68,7 +68,7 @@ cyan=`tput setaf 7`
 yellow=`tput setaf 3`
 
 
-
+dockemu(){
 echo  "${green}##############################################"
 echo  "##############################################"
 echo  "______ _____ _____  _   __ ________  ____   _ "
@@ -79,12 +79,11 @@ echo  "| |/ /\ \_/ / \__/\| |\  \| |___| |  | | |_| |"
 echo  "|___/  \___/ \____/\_| \_/\____/\_|  |_/\___/ "
 echo  ""
 echo  "##############################################"
-echo  "#########  WELCOME TO DOCKEMU $version ########"
+echo  "#########  WELCOME TO DOCKEMU $version #####"
 echo  "##############################################"
 echo  ""
 echo  "${reset}"
-
-
+}
 
 
 
@@ -96,20 +95,23 @@ echo  "${reset}"
 usage(){
 
 	cat <<-EOU
-	${yellow} usage :   $0  [OPTIONS]  
+	${yellow} usage :   $0 [COMMAND] [OPTIONS]  
 
-	OPTIONS:
-	    start|--start|-start|-s|--s    <config file>               starts DOCKEMU with a config file  :)
+    Commands:
 
-        attach 	container-ID							           attach to a given container
+      start, -s, -start   <config file>                            starts DOCKEMU with a config file  :)
+
+      attach 	<container-ID>                                     attach to a given container
         
-        list                                                       list running containers
+      list                                                         list running containers
 
-	    destroy|--destroy|-destroy|-d|--d  <all| containerID>      destroys a containerID or all
 
-	    -print                                                     prints the current configuration
+      destroy|--destroy|-destroy|-d|--d  <all| containerID>        destroys a containerID or all
 
-	    -help,-h,--help                                            prints this message
+      -print                                                       prints the current configuration
+
+
+      -help,-h,--help                                              prints this message
 	
 
 	NOTE: if no configuration file is provided  while start it will use the default one
@@ -131,7 +133,7 @@ attach(){
 
 list(){
 	echo "AVAILABLE DOCKEMUS"
-	docker ps |grep dockemu|awk '{print $(NF)}'
+	docker ps |grep to_dockemu|awk '{print $(NF)}'
 }
 
 
@@ -422,6 +424,7 @@ if [ $# -gt 0 ] ;then
 					#echo "conf: $conf_file found"
 					#step 1:
 					#echo "lets read it"
+					dockemu
 					config_reader $conf_file
 					#step 2:
 					start olsrd $olsr_containers
