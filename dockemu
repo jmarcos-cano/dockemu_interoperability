@@ -99,16 +99,16 @@ usage(){
 
     Commands:
 
-      start, -s, -start   <config file>                            starts DOCKEMU with a config file  :)
+      start, -s, -start   [config file]                            starts DOCKEMU with a config file  :)
 
-      attach 	<container-ID>                                     attach to a given container, useful to debug
+      attach 	[container-ID]                                     attach to a given container, useful to debug
         
+      destroy,-d,--d  <all| containerID>                           destroys a containerID or all
+
       list                                                         list running containers
 
 
-      destroy,-d,--d  <all| containerID>                           destroys a containerID or all
-
-      -print                                                       prints the current configuration
+      print                                                        prints the current configuration
 
 
       -help,-h,--help                                              prints this message
@@ -431,11 +431,11 @@ if [ $# -gt 0 ] ;then
 
 
 				else
-					echo "conf file: '$conf_file' NOT FOUND"
+					echo "${red}conf file: '$conf_file' NOT FOUND ${reset}"
 					exit 0
 				fi	
 			else
-				echo [ERROR] config file not provided
+				echo "${red}[ERROR] config file not provided ${reset}"
 				usage
 			fi
 		;;
@@ -446,7 +446,7 @@ if [ $# -gt 0 ] ;then
 				destroy $2
 
 			else
-				echo "[ERROR] destroy all or a specific ID?"
+				echo "${red}[ERROR] destroy all or a specific ID? ${reset}"
 				exit 0
 			fi
 		;;	
@@ -470,6 +470,7 @@ if [ $# -gt 0 ] ;then
 			echo " print the current config"
 			;;
 		*)
+		  echo "${red} WRONG OPTION(S) $@ ${reset}"
 		usage
 		;;
 	esac
