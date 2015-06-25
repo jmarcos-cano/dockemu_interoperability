@@ -1,0 +1,46 @@
+
+ *** olsr.org -  0.6.6.1-git_0000000-hash_41d32a614ae55e881b7c0456c8e3ed54 ***
+ Build date: 2013-10-26 05:10:52 on toyol
+ http://www.olsr.org
+
+Debug level: 0
+	IPv4 broadcast: 255.255.255.255
+	HELLO interval: 6.00
+	HELLO validity: 600.00
+	TC interval: 0.50
+	TC validity: 300.00
+	MID interval: 10.00
+	MID validity: 300.00
+	HNA interval: 10.00
+	HNA validity: 300.00
+
+Interface DefaultsLink quality fish eye 1
+IpVersion: 4
+Clear screen enabled
+Noint set to 1
+Willingness: 3
+	IPC host: 127.0.0.1
+Hysteresis disabled
+Link quality level 2
+Pollrate 0.10
+TC redundancy 2
+MPR coverage 5
+Queuing if $interface
+	IPv4 broadcast/multicast : 255.255.255.255
+	Mode           : mesh (d)
+	IPv6 multicast           : ff02::6d
+	HELLO emission/validity  : 6.00 (d)/600.00 (d)
+	TC emission/validity     : 0.50 (d)/300.00 (d)
+	MID emission/validity    : 10.00 (d)/300.00 (d)
+	HNA emission/validity    : 10.00 (d)/300.00 (d)
+	Autodetect changes       : yes
+	IPv4 broadcast/multicast : AUTO
+	Mode           : mesh
+	IPv6 multicast           : ::
+	HELLO emission/validity  : 0.00/0.00
+	TC emission/validity     : 0.00/0.00
+	MID emission/validity    : 0.00/0.00
+	HNA emission/validity    : 0.00/0.00
+	Autodetect changes       : no
+-- ALL PLUGINS LOADED! --
+

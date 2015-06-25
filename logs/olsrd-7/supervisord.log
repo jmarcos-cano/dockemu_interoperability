@@ -1,0 +1,76 @@
+2015-06-25 07:16:51,084 CRIT Supervisor running as root (no user in config file)
+2015-06-25 07:16:51,084 WARN Included extra file "/etc/supervisor/conf.d/programs.conf" during parsing
+2015-06-25 07:16:51,135 INFO RPC interface 'supervisor' initialized
+2015-06-25 07:16:51,135 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2015-06-25 07:16:51,135 INFO supervisord started with pid 1
+2015-06-25 07:16:52,138 INFO spawned: 'iperf' with pid 12
+2015-06-25 07:16:52,141 INFO spawned: 'olsr' with pid 13
+2015-06-25 07:16:52,149 DEBG 'olsr' stdout output:
+
+ *** olsr.org -  0.6.6.1-git_0000000-hash_41d32a614ae55e881b7c0456c8e3ed54 ***
+ Build date: 2013-10-26 05:10:52 on toyol
+ http://www.olsr.org
+
+
+2015-06-25 07:16:52,149 DEBG 'olsr' stdout output:
+Debug level: 0
+	IPv4 broadcast: 255.255.255.255
+	HELLO interval: 6.00
+	HELLO validity: 600.00
+	TC interval: 0.50
+	TC validity: 300.00
+	MID interval: 10.00
+	MID validity: 300.00
+	HNA interval: 10.00
+	HNA validity: 300.00
+
+Interface DefaultsLink quality fish eye 1
+IpVersion: 4
+
+2015-06-25 07:16:52,150 DEBG 'olsr' stderr output:
+Parsing file: "/etc/olsrd/olsrd.conf"
+
+2015-06-25 07:16:52,150 DEBG 'olsr' stdout output:
+Clear screen enabled
+Noint set to 1
+Willingness: 3
+	IPC host: 127.0.0.1
+Hysteresis disabled
+Link quality level 2
+Pollrate 0.10
+TC redundancy 2
+MPR coverage 5
+Queuing if $interface
+	IPv4 broadcast/multicast : 255.255.255.255
+	Mode           : mesh (d)
+	IPv6 multicast           : ff02::6d
+	HELLO emission/validity  : 6.00 (d)/600.00 (d)
+	TC emission/validity     : 0.50 (d)/300.00 (d)
+	MID emission/validity    : 10.00 (d)/300.00 (d)
+	HNA emission/validity    : 10.00 (d)/300.00 (d)
+	Autodetect changes       : yes
+	IPv4 broadcast/multicast : AUTO
+	Mode           : mesh
+	IPv6 multicast           : ::
+	HELLO emission/validity  : 0.00/0.00
+	TC emission/validity     : 0.00/0.00
+	MID emission/validity    : 0.00/0.00
+	HNA emission/validity    : 0.00/0.00
+	Autodetect changes       : no
+
+2015-06-25 07:16:52,151 DEBG 'iperf' stdout output:
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+
+2015-06-25 07:16:52,155 DEBG 'olsr' stderr output:
+No interfaces detected! This might be intentional, but it also might mean that your configuration is fubar.
+I will continue after 5 seconds...
+
+2015-06-25 07:16:53,157 INFO success: iperf entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-06-25 07:16:53,157 INFO success: olsr entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-06-25 07:16:57,155 DEBG 'olsr' stdout output:
+-- ALL PLUGINS LOADED! --
+
+

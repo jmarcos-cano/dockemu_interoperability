@@ -99,7 +99,7 @@ main (int argc, char *argv[])
   // the right side.
   //
   NodeContainer nodes;
-  nodes.Create(4);
+  nodes.Create(10);
 
   //
   // We're going to use 802.11 A so set up a wifi helper to reflect that.
@@ -149,8 +149,8 @@ main (int argc, char *argv[])
   mobility.SetMobilityModel ("ns3::RandomWalk2dMobilityModel",
                              "Mode", StringValue ("Time"),
                              "Time", StringValue ("2s"),
-                             "Speed", StringValue ("ns3::ConstantRandomVariable[Constant=1.0]"),
-                             "Bounds", RectangleValue (Rectangle (0.0, 20.0, 0.0, 20.0)));
+                             "Speed", StringValue ("ns3::ConstantRandomVariable[Constant=3.0]"),
+                             "Bounds", RectangleValue (Rectangle (0.0, 50.0, 0.0, 50.0)));
 
 
 
@@ -170,6 +170,18 @@ main (int argc, char *argv[])
 
 
   //running containers
+tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-9")); 
+ tapBridge.Install (nodes.Get (9), devices.Get (9));
+tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-8")); 
+ tapBridge.Install (nodes.Get (8), devices.Get (8));
+tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-7")); 
+ tapBridge.Install (nodes.Get (7), devices.Get (7));
+tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-6")); 
+ tapBridge.Install (nodes.Get (6), devices.Get (6));
+tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-5")); 
+ tapBridge.Install (nodes.Get (5), devices.Get (5));
+tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-4")); 
+ tapBridge.Install (nodes.Get (4), devices.Get (4));
 tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-3")); 
  tapBridge.Install (nodes.Get (3), devices.Get (3));
 tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-2")); 

@@ -1,0 +1,40 @@
+[ 06/25/15-01:16:46 ] BRIDGES: br: br-olsrd-0 tap: tap-olsrd-0 CREATED
+[ 06/25/15-01:16:46 ] DOCKER: docker-olsrd-0 ID: olsrd-0 TYPE: olsrd CREATED
+[ 06/25/15-01:16:47 ] NETWORK inside DOCKER: dockemu-olsrd-0 IP:10.0.0.1/8 CREATED & ATTACHED TO BRIDGES
+[ 06/25/15-01:16:47 ]
+[ 06/25/15-01:16:47 ] BRIDGES: br: br-olsrd-1 tap: tap-olsrd-1 CREATED
+[ 06/25/15-01:16:47 ] DOCKER: docker-olsrd-1 ID: olsrd-1 TYPE: olsrd CREATED
+[ 06/25/15-01:16:47 ] NETWORK inside DOCKER: dockemu-olsrd-1 IP:10.0.0.2/8 CREATED & ATTACHED TO BRIDGES
+[ 06/25/15-01:16:47 ]
+[ 06/25/15-01:16:47 ] BRIDGES: br: br-olsrd-2 tap: tap-olsrd-2 CREATED
+[ 06/25/15-01:16:48 ] DOCKER: docker-olsrd-2 ID: olsrd-2 TYPE: olsrd CREATED
+[ 06/25/15-01:16:48 ] NETWORK inside DOCKER: dockemu-olsrd-2 IP:10.0.0.3/8 CREATED & ATTACHED TO BRIDGES
+[ 06/25/15-01:16:48 ]
+[ 06/25/15-01:16:48 ] BRIDGES: br: br-olsrd-3 tap: tap-olsrd-3 CREATED
+[ 06/25/15-01:16:48 ] DOCKER: docker-olsrd-3 ID: olsrd-3 TYPE: olsrd CREATED
+[ 06/25/15-01:16:48 ] NETWORK inside DOCKER: dockemu-olsrd-3 IP:10.0.0.4/8 CREATED & ATTACHED TO BRIDGES
+[ 06/25/15-01:16:48 ]
+[ 06/25/15-01:16:49 ] BRIDGES: br: br-olsrd-4 tap: tap-olsrd-4 CREATED
+[ 06/25/15-01:16:49 ] DOCKER: docker-olsrd-4 ID: olsrd-4 TYPE: olsrd CREATED
+[ 06/25/15-01:16:49 ] NETWORK inside DOCKER: dockemu-olsrd-4 IP:10.0.0.5/8 CREATED & ATTACHED TO BRIDGES
+[ 06/25/15-01:16:49 ]
+[ 06/25/15-01:16:49 ] BRIDGES: br: br-olsrd-5 tap: tap-olsrd-5 CREATED
+[ 06/25/15-01:16:49 ] DOCKER: docker-olsrd-5 ID: olsrd-5 TYPE: olsrd CREATED
+[ 06/25/15-01:16:49 ] NETWORK inside DOCKER: dockemu-olsrd-5 IP:10.0.0.6/8 CREATED & ATTACHED TO BRIDGES
+[ 06/25/15-01:16:50 ]
+[ 06/25/15-01:16:50 ] BRIDGES: br: br-olsrd-6 tap: tap-olsrd-6 CREATED
+[ 06/25/15-01:16:50 ] DOCKER: docker-olsrd-6 ID: olsrd-6 TYPE: olsrd CREATED
+[ 06/25/15-01:16:50 ] NETWORK inside DOCKER: dockemu-olsrd-6 IP:10.0.0.7/8 CREATED & ATTACHED TO BRIDGES
+[ 06/25/15-01:16:50 ]
+[ 06/25/15-01:16:50 ] BRIDGES: br: br-olsrd-7 tap: tap-olsrd-7 CREATED
+[ 06/25/15-01:16:50 ] DOCKER: docker-olsrd-7 ID: olsrd-7 TYPE: olsrd CREATED
+[ 06/25/15-01:16:51 ] NETWORK inside DOCKER: dockemu-olsrd-7 IP:10.0.0.8/8 CREATED & ATTACHED TO BRIDGES
+[ 06/25/15-01:16:51 ]
+[ 06/25/15-01:16:51 ] BRIDGES: br: br-olsrd-8 tap: tap-olsrd-8 CREATED
+[ 06/25/15-01:16:51 ] DOCKER: docker-olsrd-8 ID: olsrd-8 TYPE: olsrd CREATED
+[ 06/25/15-01:16:51 ] NETWORK inside DOCKER: dockemu-olsrd-8 IP:10.0.0.9/8 CREATED & ATTACHED TO BRIDGES
+[ 06/25/15-01:16:51 ]
+[ 06/25/15-01:16:51 ] BRIDGES: br: br-olsrd-9 tap: tap-olsrd-9 CREATED
+[ 06/25/15-01:16:52 ] DOCKER: docker-olsrd-9 ID: olsrd-9 TYPE: olsrd CREATED
+[ 06/25/15-01:16:52 ] NETWORK inside DOCKER: dockemu-olsrd-9 IP:10.0.0.10/8 CREATED & ATTACHED TO BRIDGES
+[ 06/25/15-01:16:52 ]
