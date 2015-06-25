@@ -14,36 +14,28 @@ containers=0
 docker_image="to_dockemu:simple"
 
 
-docker_simple="docker run --privileged -i -t -d --net=none --name docker-$id $docker_image "
-#echo $docker_simple
-docker_complex="docker run -v $(pwd)/logs:/var/log  --privileged -d  --net=none --name docker-$id $docker_image "
 
 ## deberian ser leidas del conf file
 #GENERAL
-waf_path=/home/emulation/repos/ns-3-allinone/ns-3-dev/
-verbose=false
-logfile="logs/naet.log"
-persistence=true
-container_log_path=log/
+# waf_path=/home/emulation/repos/ns-3-allinone/ns-3-dev/
+# verbose=false
+# logfile="logs/naet.log"
+# persistence=true
+# container_log_path=log/
 
 
-config_files_path="conf/"
-template_file="ns3/tap-wifi"
-container_expr="container"
-network="10.0.0.0"
-netmask="/8"
 
 
-### OLSRD DEFAULTS
-olsr_containers=2
-olsr_network=10.0.0.0
-olsr_etmask=255.0.0.0
+# ### OLSRD DEFAULTS
+# olsr_containers=2
+# olsr_network=10.0.0.0
+# olsr_etmask=255.0.0.0
 
 
-###BMX6
-bmx6_containers=2
-bmx6_network=10.0.0.0
-bmx6_netmask=255.0.0.0
+# ###BMX6
+# bmx6_containers=2
+# bmx6_network=10.0.0.0
+# bmx6_netmask=255.0.0.0
 
 
 version="V.2.0 BETA"
@@ -67,6 +59,8 @@ reset=`tput sgr0`
 cyan=`tput setaf 7`
 yellow=`tput setaf 3`
 
+
+                                              
 
 dockemu(){
 echo  "${green}##############################################"
@@ -269,6 +263,7 @@ create(){
 			#exit 0
 		}
 		
+
 		## CREATE INNER BRIDGE
 		pid=$(docker inspect -f '{{.State.Pid}}' dockemu-${id} )
 		mkdir -p /var/run/netns 
