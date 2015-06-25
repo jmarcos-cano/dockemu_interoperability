@@ -297,26 +297,12 @@ template(){
 	text="tapBridge.SetAttribute (\"DeviceName\", StringValue (\"tap-${id}\")); \n
   	tapBridge.Install (nodes.Get ($conteo), devices.Get ($conteo));"
   	echo $text
-	sed -i "/running containers/a $(echo $text)" $template_file.cc
-}
-
-
-
-#######################
-#template()
-#description:
-# templates the CC file
-#######################
-template2(){
-	id=$1
-	conteo=$2
-	#echo "TEMPLATING" $id
-
-	text="tapBridge.SetAttribute (\"DeviceName\", StringValue (\"tap-${id}\")); \n
-  	tapBridge.Install (nodes.Get ($conteo), devices.Get ($conteo));"
-  	echo $text
 	sed  "/running containers/a $(echo $text)" $template_file
 }
+
+
+
+
 
 
 #######################
