@@ -3,9 +3,9 @@ MAINTAINER <marcos cano jmarcos.cano@gmail.com>
 
 ## INSTALL OLSR
 RUN apt-get update 
-RUN apt-get update  && apt-get install -y iperf olsrd 
+RUN apt-get update  && apt-get install -y iperf olsrd  
 RUN apt-get install -y git-core 
-RUN apt-get install -y make
+RUN apt-get install -y make traceroute
 RUN  apt-get update 
 RUN apt-get install -y build-essential supervisor nmap gcc
 
