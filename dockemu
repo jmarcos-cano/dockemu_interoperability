@@ -11,7 +11,7 @@
 
 
 containers=0
-docker_image="to_dockemu:simple"
+docker_image="dockemu:simple"
 
 
 docker_simple="docker run --privileged -i -t -d --net=none --name docker-$id $docker_image "
@@ -128,23 +128,6 @@ list(){
 	docker ps |grep dockemu|awk '{print $(NF)}'
 }
 
-#######################
-# log()
-# description:
-# a bash utility to log msgs to $logfile
-# $1 = message to log
-#######################
-log(){
-	message=$1
-	date=$(echo [ $(date +%D-%T) ])
-	#echo "logging utility"
-	if $logging;then
-		echo $date $message | tee -a $logfile
-	else
-		echo $date $message
-	fi
-}
-
 
 #######################
 # destroy()
@@ -159,7 +142,6 @@ destroy(){
 	#lxc-destroy -n container-${id}
 	###bridge down
 		#docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
-	
 
 	if [ "$id" = "all" ];then
 		while read line
@@ -188,6 +170,25 @@ destroy(){
 	fi
 	
 }
+
+
+#######################
+# log()
+# description:
+# a bash utility to log msgs to $logfile
+# $1 = message to log
+#######################
+log(){
+	message=$1
+	date=$(echo [ $(date +%D-%T) ])
+	#echo "logging utility"
+	if $logging;then
+		echo $date $message | tee -a $logfile
+	else
+		echo $date $message
+	fi
+}
+
 
 
 #######################
@@ -299,6 +300,23 @@ template(){
 	sed -i "/running containers/a $(echo $text)" $template_file.cc
 }
 
+
+
+#######################
+#template()
+#description:
+# templates the CC file
+#######################
+template2(){
+	id=$1
+	conteo=$2
+	#echo "TEMPLATING" $id
+
+	text="tapBridge.SetAttribute (\"DeviceName\", StringValue (\"tap-${id}\")); \n
+  	tapBridge.Install (nodes.Get ($conteo), devices.Get ($conteo));"
+  	echo $text
+	sed  "/running containers/a $(echo $text)" $template_file
+}
 
 
 #######################

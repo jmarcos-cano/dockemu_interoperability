@@ -130,12 +130,30 @@ main (int argc, char *argv[])
   // We need location information since we are talking about wifi, so add a
   // constant position to the ghost nodes.
   //
+ // MobilityHelper mobility;
+ // Ptr<ListPositionAllocator> positionAlloc = CreateObject<ListPositionAllocator> ();
+ // positionAlloc->Add (Vector (0.0, 0.0, 0.0));
+ // positionAlloc->Add (Vector (5.0, 0.0, 0.0));
+ // mobility.SetPositionAllocator (positionAlloc);
+ // mobility.SetMobilityModel ("ns3::ConstantPositionMobilityModel");
+
   MobilityHelper mobility;
-  Ptr<ListPositionAllocator> positionAlloc = CreateObject<ListPositionAllocator> ();
-  positionAlloc->Add (Vector (0.0, 0.0, 0.0));
-  positionAlloc->Add (Vector (5.0, 0.0, 0.0));
-  mobility.SetPositionAllocator (positionAlloc);
-  mobility.SetMobilityModel ("ns3::ConstantPositionMobilityModel");
+  mobility.SetPositionAllocator ("ns3::GridPositionAllocator",
+                                 "MinX", DoubleValue (1.0),
+                                 "MinY", DoubleValue (1.0),
+                                 "DeltaX", DoubleValue (5.0),
+                                 "DeltaY", DoubleValue (5.0),
+                                 "GridWidth", UintegerValue (3),
+                                 "LayoutType", StringValue ("RowFirst"));
+                                 
+  mobility.SetMobilityModel ("ns3::RandomWalk2dMobilityModel",
+                             "Mode", StringValue ("Time"),
+                             "Time", StringValue ("2s"),
+                             "Speed", StringValue ("ns3::ConstantRandomVariable[Constant=1.0]"),
+                             "Bounds", RectangleValue (Rectangle (0.0, 20.0, 0.0, 20.0)));
+
+
+
   mobility.Install (nodes);
 
   //

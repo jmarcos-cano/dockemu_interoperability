@@ -1,6 +1,6 @@
 #!/bin/bash
 
-image=to_dockemu:protocols
+image=dockemu:interop
 
 
 docker build  --force-rm -t $image .

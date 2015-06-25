@@ -1,6 +1,6 @@
 #!/bin/bash
 
-image=to_dockemu:simple
+image=dockemu:simple
 
 
 docker build  --force-rm -t $image .
