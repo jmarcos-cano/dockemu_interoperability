@@ -446,7 +446,7 @@ if [ $# -gt 0 ] ;then
 				exit 0
 			fi
 		;;	
-		attach)
+		attach|a|-a|--a)
 
 			if [ ! -z $2 ];then
 				attach $2
