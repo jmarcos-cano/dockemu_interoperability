@@ -101,12 +101,12 @@ usage(){
 
       start, -s, -start   <config file>                            starts DOCKEMU with a config file  :)
 
-      attach 	<container-ID>                                     attach to a given container
+      attach 	<container-ID>                                     attach to a given container, useful to debug
         
       list                                                         list running containers
 
 
-      destroy|--destroy|-destroy|-d|--d  <all| containerID>        destroys a containerID or all
+      destroy,-d,--d  <all| containerID>                           destroys a containerID or all
 
       -print                                                       prints the current configuration
 
