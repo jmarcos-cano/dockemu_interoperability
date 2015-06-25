@@ -389,11 +389,11 @@ start(){
 	done
 
 	
+	echo "RUNNING: $runningTime"
 
 	start_waf
 
-	echo "WAITING: $runningTime"
-	sleep $runningTime
+	#sleep $runningTime
 
 	# for i in $list;do
 	# 	destroy $i &>/dev/null
