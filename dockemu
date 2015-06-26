@@ -269,6 +269,7 @@ create(){
 
 		## CREATE INNER BRIDGE
 		pid=$(docker inspect -f '{{.State.Pid}}' dockemu-${id} )
+		echo $pid
 		mkdir -p /var/run/netns  2>/dev/null
 		ln -s /proc/$pid/ns/net /var/run/netns/$pid
 
