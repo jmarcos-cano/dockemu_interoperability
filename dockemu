@@ -249,7 +249,7 @@ create(){
 				if [ ! -e $(pwd)/logs/$id/ ];then
 					mkdir $(pwd)/logs/$id/
 				fi 
-				contain=$(docker run -v -e "count=$count" $(pwd)/logs/$id/:/var/log/supervisor/ --privileged  -d --net=none --name dockemu-$id $docker_image )
+				contain=$(docker run  -e "count=$count" -v $(pwd)/logs/$id/:/var/log/supervisor/ --privileged  -d --net=none --name dockemu-$id $docker_image )
 			else
 				contain=$(docker run --privileged -e "count=$count"  -d --net=none --name dockemu-$id $docker_image )
 			fi
