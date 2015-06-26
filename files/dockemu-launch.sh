@@ -23,6 +23,8 @@ wait_interface(){
 		sleep $delay
 	done
 	echo "$interface PRESENT"
+	#solo si es olsr
+	#/sbin/ifconfig eth0 inet6 add 2001:0db8:0:f101::$count/64 
 }
 
 
