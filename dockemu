@@ -168,7 +168,7 @@ destroy(){
 		ip link del "${id}-B"  #2>/dev/null
 
 		#delete the sml
-		rm /var/run/netns/*
+		#rm /var/run/netns/*
 		docker stop  dockemu-$id #2>/dev/null
 		docker kill dockemu-$id #2>/dev/null
 		docker rm dockemu-$id  #2>/dev/null
