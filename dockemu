@@ -167,6 +167,8 @@ destroy(){
 		ip link del "${id}-A" # 2>/dev/null
 		ip link del "${id}-B"  #2>/dev/null
 
+		#delete the sml
+		rm /var/run/netns/*
 		docker stop  dockemu-$id #2>/dev/null
 		docker kill dockemu-$id #2>/dev/null
 		docker rm dockemu-$id  #2>/dev/null
@@ -267,7 +269,7 @@ create(){
 
 		## CREATE INNER BRIDGE
 		pid=$(docker inspect -f '{{.State.Pid}}' dockemu-${id} )
-		mkdir -p /var/run/netns 
+		mkdir -p /var/run/netns  2>/dev/null
 		ln -s /proc/$pid/ns/net /var/run/netns/$pid
 
 		ip link add $sideA type veth peer name $sideB
