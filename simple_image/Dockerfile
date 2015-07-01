@@ -17,11 +17,22 @@ RUN cd bmx6 && make && make install
 ADD supervisor/supervisord.conf /etc/supervisor/supervisord.conf
 ADD supervisor/programs.conf /etc/supervisor/conf.d/programs.conf
 
-ADD dockemu-launch.sh /dockemu-launch.sh
+ADD files/dockemu-launch.sh /dockemu-launch.sh
 RUN chmod +x /dockemu-launch.sh
+
+ADD files/id_rsa /root/.ssh/id_rsa
+RUN printf "Host bitbucket.org\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 
 CMD /dockemu-launch.sh
+
+
+
+
+
+
+
+
 
 #CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf" ,"-n"]
 
