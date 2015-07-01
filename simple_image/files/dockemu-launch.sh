@@ -19,7 +19,7 @@ wait_interface(){
 
 wait_interface
 
-/sbin/ifconfig $interface inet6 add 2001:0db8:0:f101::$count/64 
+/sbin/ifconfig $interface inet6 add 2001:0db8:0:f101:0:$count/64 
 
 
 git clone git@bitbucket.org:josealfredo1515/interopframework.git /python
