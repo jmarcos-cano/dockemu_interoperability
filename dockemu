@@ -256,7 +256,14 @@ create(){
 				if [ ! -e $(pwd)/logs/$id/ ];then
 					mkdir $(pwd)/logs/$id/
 				fi 
-				contain=$(docker run  -e "count=$count" -v $(pwd)/logs/$id/:/var/log/supervisor/ --privileged  -d --net=none --name dockemu-$id $docker_image )
+
+				if [ $count -gt $(($type_count / 2 )) ];then
+					echo "***********IN THE HALF!!!!!! 10.1.0.0/16"
+					contain=$(docker run -e "half=1" -e "count=$count" -v $(pwd)/logs/$id/:/var/log/supervisor/ --privileged  -d --net=none --name dockemu-$id $docker_image )
+
+				else
+					contain=$(docker run -e "half=0"  -e "count=$count" -v $(pwd)/logs/$id/:/var/log/supervisor/ --privileged  -d --net=none --name dockemu-$id $docker_image )
+				fi
 			else
 				contain=$(docker run --privileged -e "count=$count"  -d --net=none --name dockemu-$id $docker_image )
 			fi
@@ -284,9 +291,7 @@ create(){
 		ip netns exec $pid ip link set dev $sideB name eth0
 		ip netns exec $pid ip link set eth0 up
 
-		if [ $count -gt $(($type_count / 2 )) ];then
-			echo "***********IN THE HALF!!!!!! 10.1.0.0/16"
-		fi
+		
 
 		ip netns exec $pid ip addr add 10.0.0.$count/16 dev eth0   #network???
 		ip link set $sideA up
