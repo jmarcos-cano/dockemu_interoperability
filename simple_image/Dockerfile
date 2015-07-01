@@ -5,8 +5,8 @@ MAINTAINER <marcos cano jmarcos.cano@gmail.com>
 RUN apt-get update 
 RUN apt-get update  && apt-get install -y iperf olsrd  
 RUN apt-get install -y git-core make traceroute
-RUN apt-get install -y build-essential supervisor nmap gcc ibpcap0.8-dev python python-dev python-setuptools python-netifaces python-pip
-RUN pip install pcapy pcs
+RUN apt-get install -y python-pcs build-essential supervisor nmap gcc ibpcap0.8-dev python python-dev python-setuptools python-netifaces python-pip
+RUN pip install pcapy 
 
 
 ## SINTALL BMX6
