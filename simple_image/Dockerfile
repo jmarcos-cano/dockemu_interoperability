@@ -20,13 +20,9 @@ ADD supervisor/programs.conf /etc/supervisor/conf.d/programs.conf
 ADD files/dockemu-launch.sh /dockemu-launch.sh
 RUN chmod +x /dockemu-launch.sh
 
-ADD files/id_rsa /root/.ssh/id_rsa
-RUN printf "Host bitbucket.org\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 
 CMD /dockemu-launch.sh
-
-
 
 
 
