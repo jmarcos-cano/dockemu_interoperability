@@ -168,7 +168,7 @@ destroy(){
 		ip link del "${id}-B"  #2>/dev/null
 
 		#delete the sml
-		docker stop  dockemu-$id #2>/dev/null
+		docker stop  dockemu-$id  #2>/dev/null
 		docker kill dockemu-$id #2>/dev/null
 		docker rm dockemu-$id  #2>/dev/null
 	fi
@@ -440,6 +440,7 @@ if [ $# -gt 0 ] ;then
 					
 					config_reader $conf_file
 					#step 2:
+					rm /var/run/netns/*
 					start olsrd $olsr_containers
 
 
@@ -456,7 +457,7 @@ if [ $# -gt 0 ] ;then
 			#echo destroy
 			if [ ! -z $2 ];then
 				echo "destroy"
-				rm /var/run/netns/*
+				
 				destroy $2
 
 			else
