@@ -17,10 +17,8 @@ RUN cd bmx6 && make && make install
 ADD supervisor/supervisord.conf /etc/supervisor/supervisord.conf
 ADD supervisor/programs.conf /etc/supervisor/conf.d/programs.conf
 
-ADD files/dockemu-launch.sh /dockemu-launch.sh
+ADD files/* /
 RUN chmod +x /dockemu-launch.sh
-
-
 
 CMD /dockemu-launch.sh
 
