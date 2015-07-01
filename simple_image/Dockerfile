@@ -8,7 +8,7 @@ RUN apt-get install -y git-core
 RUN apt-get install -y make traceroute
 RUN  apt-get update 
 RUN apt-get install -y build-essential supervisor nmap gcc  python python-dev python-setuptools python-netifaces python-pip
-RUN pip install -y pcapy
+RUN pip install pcapy
 
 
 ## SINTALL BMX6
