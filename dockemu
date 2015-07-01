@@ -168,7 +168,6 @@ destroy(){
 		ip link del "${id}-B"  #2>/dev/null
 
 		#delete the sml
-		#rm /var/run/netns/*
 		docker stop  dockemu-$id #2>/dev/null
 		docker kill dockemu-$id #2>/dev/null
 		docker rm dockemu-$id  #2>/dev/null
@@ -457,6 +456,7 @@ if [ $# -gt 0 ] ;then
 			#echo destroy
 			if [ ! -z $2 ];then
 				echo "destroy"
+				rm /var/run/netns/*
 				destroy $2
 
 			else
