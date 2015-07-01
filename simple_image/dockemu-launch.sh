@@ -22,7 +22,7 @@ wait_interface
 /sbin/ifconfig $interface inet6 add 2001:0db8:0:f101::$count/64 
 
 
-/usr/sbin/olsrd  -i $interface -nofork -d 1 -ipv6
+#/usr/sbin/olsrd  -i $interface -nofork -d 1 -ipv6
 
 
 
