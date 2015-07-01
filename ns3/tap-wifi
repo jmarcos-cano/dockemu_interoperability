@@ -149,7 +149,7 @@ main (int argc, char *argv[])
   mobility.SetMobilityModel ("ns3::RandomWalk2dMobilityModel",
                              "Mode", StringValue ("Time"),
                              "Time", StringValue ("2s"),
-                             "Speed", StringValue ("ns3::ConstantRandomVariable[Constant=1.0]"),
+                             "Speed", StringValue ("ns3::ConstantRandomVariable[Constant=3.0]"),
                              "Bounds", RectangleValue (Rectangle (0.0, 50.0, 0.0, 50.0)));
 
 

@@ -257,13 +257,13 @@ create(){
 					mkdir $(pwd)/logs/$id/
 				fi 
 
-				if [ $count -gt $(($type_count / 2 )) ];then
-					echo "***********IN THE HALF!!!!!! 10.1.0.0/16"
-					contain=$(docker run -e "half=1" -e "count=$count" -v $(pwd)/logs/$id/:/var/log/supervisor/ --privileged  -d --net=none --name dockemu-$id $docker_image )
+				#if [ $count -gt $(($type_count / 2 )) ];then
+				#	echo "***********IN THE HALF!!!!!! 10.1.0.0/16"
+				#	contain=$(docker run -e "half=1" -e "count=$count" -v $(pwd)/logs/$id/:/var/log/supervisor/ --privileged  -d --net=none --name dockemu-$id $docker_image )
 
-				else
+				#else
 					contain=$(docker run -e "half=0"  -e "count=$count" -v $(pwd)/logs/$id/:/var/log/supervisor/ --privileged  -d --net=none --name dockemu-$id $docker_image )
-				fi
+				#fi
 			else
 				contain=$(docker run --privileged -e "count=$count"  -d --net=none --name dockemu-$id $docker_image )
 			fi
