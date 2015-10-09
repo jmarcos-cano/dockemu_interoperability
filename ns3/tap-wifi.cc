@@ -99,7 +99,7 @@ main (int argc, char *argv[])
   // the right side.
   //
   NodeContainer nodes;
-  nodes.Create(10);
+  nodes.Create(2);
 
   //
   // We're going to use 802.11 A so set up a wifi helper to reflect that.
@@ -143,14 +143,14 @@ main (int argc, char *argv[])
                                  "MinY", DoubleValue (1.0),
                                  "DeltaX", DoubleValue (5.0),
                                  "DeltaY", DoubleValue (5.0),
-                                 "GridWidth", UintegerValue (3),
+                                 "GridWidth", UintegerValue (5),
                                  "LayoutType", StringValue ("RowFirst"));
                                  
   mobility.SetMobilityModel ("ns3::RandomWalk2dMobilityModel",
                              "Mode", StringValue ("Time"),
                              "Time", StringValue ("2s"),
-                             "Speed", StringValue ("ns3::ConstantRandomVariable[Constant=3.0]"),
-                             "Bounds", RectangleValue (Rectangle (0.0, 50.0, 0.0, 50.0)));
+                             "Speed", StringValue ("ns3::ConstantRandomVariable[Constant=1.0]"),
+                             "Bounds", RectangleValue (Rectangle (0.0, 100.0, 0.0, 100.0)));
 
 
 
@@ -170,22 +170,6 @@ main (int argc, char *argv[])
 
 
   //running containers
-tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-9")); 
- tapBridge.Install (nodes.Get (9), devices.Get (9));
-tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-8")); 
- tapBridge.Install (nodes.Get (8), devices.Get (8));
-tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-7")); 
- tapBridge.Install (nodes.Get (7), devices.Get (7));
-tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-6")); 
- tapBridge.Install (nodes.Get (6), devices.Get (6));
-tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-5")); 
- tapBridge.Install (nodes.Get (5), devices.Get (5));
-tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-4")); 
- tapBridge.Install (nodes.Get (4), devices.Get (4));
-tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-3")); 
- tapBridge.Install (nodes.Get (3), devices.Get (3));
-tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-2")); 
- tapBridge.Install (nodes.Get (2), devices.Get (2));
 tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-1")); 
  tapBridge.Install (nodes.Get (1), devices.Get (1));
 tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-0")); 
@@ -196,11 +180,10 @@ tapBridge.SetAttribute ("DeviceName", StringValue ("tap-olsrd-0"));
 
 
 
-
   //
   // Run the simulation for ten minutes to give the user time to play around
   //
-  Simulator::Stop (Seconds (300.));
+  Simulator::Stop (Seconds (10000.));
   Simulator::Run ();
   Simulator::Destroy ();
 }
