@@ -1,3 +1,5 @@
 ns3/tap-wifi.cc
 
 logs/olsrd-*
+logs/dockemu.log
+logs/*
