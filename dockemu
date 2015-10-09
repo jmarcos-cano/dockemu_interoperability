@@ -8,8 +8,6 @@
 
 
 
-
-
 containers=0
 docker_image="to_dockemu:simple"
 
@@ -343,10 +341,12 @@ config_reader(){
 
 }
 
+#######################
+### start_waf()
+## Description:
+### copies the .cc file and starts the waf with that .cc
+#######################
 
-### 
-##
-###
 start_waf(){
 	echo "RUNNING SIMULATION press CTRL-C to stop it"
 	cp $template_file.cc $waf_path/scratch/tap-csma-virtual-machine-cpy.cc
