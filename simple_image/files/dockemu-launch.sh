@@ -17,8 +17,6 @@ fi
 
 
 
-exit
-
 
 
 wait_interface(){
@@ -38,11 +36,11 @@ wait_interface(){
 
 wait_interface
 
-if [  "$half"  -eq "0" ];then
-	/sbin/ifconfig $interface inet6 add 2001:0db8:0:f101::$count/64 
-else
-	/sbin/ifconfig $interface inet6 add 2002:0db8:0:f101::$count/64 
-fi
+# if [  "$half"  -eq "0" ];then
+# 	/sbin/ifconfig $interface inet6 add 2001:0db8:0:f101::$count/64 
+# else
+# 	/sbin/ifconfig $interface inet6 add 2002:0db8:0:f101::$count/64 
+# fi
 
 
 git clone git@bitbucket.org:josealfredo1515/interopframework.git /python

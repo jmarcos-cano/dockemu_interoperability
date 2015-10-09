@@ -30,7 +30,6 @@ RUN printf "Host bitbucket.org\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 
 ENTRYPOINT ["/dockemu-launch.sh"]
-CMD olsr
 
 
 
