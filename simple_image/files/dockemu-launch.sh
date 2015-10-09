@@ -6,11 +6,15 @@ type=${1:-"olsr"}
 
 if [ "$type" == "olsr" ];then
 	echo "OLSR"
+	cp /olsrd.conf   /etc/supervisor/conf.d/
 elif [ "$type" == "bmx6" ];then
 	echo "BMX6"
+	cp /bmx6.conf   /etc/supervisor/conf.d/
 else 
 	echo "wrong"
 fi
+
+
 
 
 exit

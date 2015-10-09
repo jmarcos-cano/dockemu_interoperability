@@ -19,6 +19,7 @@ ADD supervisor/supervisord.conf /etc/supervisor/supervisord.conf
 ADD supervisor/programs.conf /etc/supervisor/conf.d/programs.conf
 
 ADD files/* /
+RUN chmod +x /*.sh
 RUN chmod +x /dockemu-launch.sh
 RUN  chmod +x /*.py
 
@@ -28,7 +29,8 @@ RUN printf "Host bitbucket.org\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 
 
-CMD /dockemu-launch.sh
+ENTRYPOINT ["/dockemu-launch.sh"]
+CMD olsr
 
 
 
