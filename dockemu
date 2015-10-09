@@ -359,6 +359,13 @@ start_waf(){
 	cd $current
 }
 
+
+#######################
+### start()
+## Description:
+### starts the whole thing
+#######################
+
 start(){
 	
 	type=$1
