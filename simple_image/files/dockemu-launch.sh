@@ -1,6 +1,21 @@
 #!/bin/bash
 
 interface="eth0"
+type=${1:-"olsr"}
+
+
+if [ "$type" == "olsr" ];then
+	echo "OLSR"
+elif [ "$type" == "bmx6" ];then
+	echo "BMX6"
+else 
+	echo "wrong"
+fi
+
+
+exit
+
+
 
 wait_interface(){
 	delay=5

@@ -380,7 +380,7 @@ start(){
 	done
 
 
-### TEMAPLATE
+### TEMPLATE
 	cp $template_file $template_file.cc
 	sed -i "s=nodes.Create(2);=nodes.Create($olsr_containers);=" $template_file.cc
 	#new thing
