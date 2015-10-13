@@ -254,13 +254,13 @@ create(){
 					mkdir $(pwd)/logs/$id/
 				fi 
 
-				if [ $count -gt $(($type_count / 2 )) ];then
-					echo "***********IN THE HALF!!!!!! OLSRD"
-					contain=$(docker run -e "half=1" -e "count=$count" -v $(pwd)/logs/$id/:/var/log/supervisor/ --privileged  -d --net=none --name dockemu-$id $docker_image olsr )
-				else
-					echo "********** FIRST HALF !!!!! BMX6"
+				# if [ $count -gt $(($type_count / 2 )) ];then
+				# 	echo "***********IN THE HALF!!!!!! OLSRD"
+				# 	contain=$(docker run -e "half=1" -e "count=$count" -v $(pwd)/logs/$id/:/var/log/supervisor/ --privileged  -d --net=none --name dockemu-$id $docker_image olsr )
+				# else
+				# 	echo "********** FIRST HALF !!!!! BMX6"
 					contain=$(docker run -e "half=0"  -e "count=$count" -v $(pwd)/logs/$id/:/var/log/supervisor/ --privileged  -d --net=none --name dockemu-$id $docker_image bmx6 )
-				fi
+				# fi
 			else
 				contain=$(docker run --privileged -e "count=$count"  -d --net=none --name dockemu-$id $docker_image )
 			fi
@@ -388,7 +388,7 @@ start(){
 
 ### TEMPLATE
 	cp $template_file $template_file.cc
-	sed -i "s=nodes.Create(2);=nodes.Create($olsr_containers);=" $template_file.cc
+	sed -i "s=nodes.Create(2);=nodes.Create($type_count);=" $template_file.cc
 	#new thing
 	sed -i "s=Simulator::Stop (Seconds (600.));=Simulator::Stop (Seconds ($runningTime.));="  $template_file.cc
 
