@@ -256,9 +256,11 @@ create(){
 
 				if [ $count -gt $(($type_count / 2 )) ];then
 					echo "***********IN THE HALF!!!!!! OLSRD"
+					touch $(pwd)/logs/$id/OLSR
 					contain=$(docker run -e "half=1" -e "count=$count" -v $(pwd)/logs/$id/:/var/log/supervisor/ --privileged  -d --net=none --name dockemu-$id $docker_image olsr )
 				else
 					echo "********** FIRST HALF !!!!! BMX6"
+					touch $(pwd)/logs/$id/BMX6
 					contain=$(docker run -e "reactive=$reactive" -e "half=0"  -e "count=$count" -v $(pwd)/logs/$id/:/var/log/supervisor/ --privileged  -d --net=none --name dockemu-$id $docker_image bmx6 )
 				fi
 			else
