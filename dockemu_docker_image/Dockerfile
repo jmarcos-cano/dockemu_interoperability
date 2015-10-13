@@ -28,7 +28,7 @@ RUN chmod 600 /root/.ssh/id_rsa
 RUN printf "Host bitbucket.org\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 
-
+CMD ["bmx6"]
 ENTRYPOINT ["/dockemu-launch.sh"]
 
 
