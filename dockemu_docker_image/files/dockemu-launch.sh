@@ -3,19 +3,38 @@
 interface="eth0"
 type=${1:-"olsr"}
 
+reactive=${reactive:-0}
 
 sleep $reactive
 
-if [ "$type" == "olsr" ];then
-	echo "OLSR"
-	cp /olsrd.conf   /etc/supervisor/conf.d/olsrd.conf 
-elif [ "$type" == "bmx6" ];then
-	echo "BMX6"
-	cp /bmx6.conf   /etc/supervisor/conf.d/bmx6.conf
-else 
-	echo "wrong"
-	exit
-fi
+
+case $type in
+	olsr|olsrd|OLSR|OLSRD)
+		echo "OLSR"
+		cp /olsrd.conf   /etc/supervisor/conf.d/olsrd.conf 
+		;;
+	bmx6|BMX6)
+		echo "BMX6"
+		cp /bmx6.conf   /etc/supervisor/conf.d/bmx6.conf
+		;;
+	*)
+		echo wrong
+		exit
+	;;
+esac
+
+exit
+
+# if [ "$type" == "olsr" ];then
+# 	echo "OLSR"
+# 	cp /olsrd.conf   /etc/supervisor/conf.d/olsrd.conf 
+# elif [ "$type" == "bmx6" ];then
+# 	echo "BMX6"
+# 	cp /bmx6.conf   /etc/supervisor/conf.d/bmx6.conf
+# else 
+# 	echo "wrong"
+# 	exit
+# fi
 
 
 
