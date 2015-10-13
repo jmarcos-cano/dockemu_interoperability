@@ -163,7 +163,7 @@ destroy(){
 		tunctl -d "tap-${id}" # 2>/dev/null
 		##delete iplink
 		ip link del "${id}-A" # 2>/dev/null
-		ip link del "${id}-B"  #2>/dev/null
+		#ip link del "${id}-B"  #2>/dev/null
 
 		#delete the sml
 		docker stop  dockemu-$id  #2>/dev/null
