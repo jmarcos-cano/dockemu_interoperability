@@ -6,10 +6,10 @@ type=${1:-"olsr"}
 
 if [ "$type" == "olsr" ];then
 	echo "OLSR"
-	cp /olsrd.conf   /etc/supervisor/conf.d/
+	cp /olsrd.conf   /etc/supervisor/conf.d/olsrd.conf 
 elif [ "$type" == "bmx6" ];then
 	echo "BMX6"
-	cp /bmx6.conf   /etc/supervisor/conf.d/
+	cp /bmx6.conf   /etc/supervisor/conf.d/bmx6.conf
 else 
 	echo "wrong"
 fi
@@ -36,6 +36,10 @@ wait_interface(){
 
 wait_interface
 
+
+if [ "$type" == "olsr" ];then
+	/sbin/ifconfig $interface inet6 add 2001:0db8:0:f101::$count/64 
+fi
 # if [  "$half"  -eq "0" ];then
 # 	/sbin/ifconfig $interface inet6 add 2001:0db8:0:f101::$count/64 
 # else
