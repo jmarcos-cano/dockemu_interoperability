@@ -27,6 +27,8 @@ ADD files/id_rsa /root/.ssh/id_rsa
 RUN chmod 600 /root/.ssh/id_rsa
 RUN printf "Host bitbucket.org\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
+RUN git clone git@bitbucket.org:josealfredo1515/interopframework.git /python
+
 
 CMD ["bmx6"]
 ENTRYPOINT ["/dockemu-launch.sh"]
