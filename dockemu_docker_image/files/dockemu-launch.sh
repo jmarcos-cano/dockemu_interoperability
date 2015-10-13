@@ -12,6 +12,7 @@ elif [ "$type" == "bmx6" ];then
 	cp /bmx6.conf   /etc/supervisor/conf.d/bmx6.conf
 else 
 	echo "wrong"
+	exit
 fi
 
 
