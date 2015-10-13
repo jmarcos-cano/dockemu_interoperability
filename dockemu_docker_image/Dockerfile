@@ -27,6 +27,7 @@ ADD files/id_rsa /root/.ssh/id_rsa
 RUN chmod 600 /root/.ssh/id_rsa
 RUN printf "Host bitbucket.org\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
+ENV wait_for_it 0
 
 
 ENTRYPOINT ["/dockemu-launch.sh"]
