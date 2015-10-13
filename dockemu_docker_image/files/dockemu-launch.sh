@@ -39,6 +39,7 @@ wait_interface
 
 
 if [ "$type" == "olsr" ];then
+	
 	/sbin/ifconfig $interface inet6 add 2001:0db8:0:f101::$count/64 
 fi
 # if [  "$half"  -eq "0" ];then
