@@ -23,7 +23,7 @@ case $type in
 	;;
 esac
 
-exit
+
 
 # if [ "$type" == "olsr" ];then
 # 	echo "OLSR"
