@@ -149,7 +149,7 @@ destroy(){
 		do
 		    name=$line
 		    echo "Text read from file - $name"
-		    destroy $name
+		    destroy $name 
 		done < logs/running.log
 	else
 		ifconfig "br-${id}" down #2>/dev/null
