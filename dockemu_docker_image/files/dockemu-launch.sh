@@ -4,7 +4,7 @@ interface="eth0"
 type=${1:-"olsr"}
 
 
-sleep $wait_for_it
+sleep $reactive
 
 if [ "$type" == "olsr" ];then
 	echo "OLSR"
